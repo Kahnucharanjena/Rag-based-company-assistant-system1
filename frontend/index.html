@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Support Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo-section">
+            <div class="logo">AI</div>
+
+            <div>
+                <h2>Support AI</h2>
+                <p>Customer Assistant</p>
+            </div>
+        </div>
+
+
+        <!-- KNOWLEDGE BASE -->
+        <div class="knowledge">
+
+            <h3>Knowledge Base</h3>
+
+            <label for="fileInput" class="upload-box">
+
+                <div class="plus">+</div>
+
+                <div>Upload PDF</div>
+
+            </label>
+
+            <input
+                type="file"
+                id="fileInput"
+                accept=".pdf,application/pdf"
+                hidden
+            >
+
+            <div id="fileName" class="file-name">
+                No file selected
+            </div>
+
+            <button
+                id="processButton"
+                class="process-button"
+                type="button"
+            >
+                Process Document
+            </button>
+
+        </div>
+
+
+        <!-- ABOUT -->
+        <div class="about">
+
+            <h3>About</h3>
+
+            <p>
+                Ask questions about company policies,
+                products and services.
+                The AI answers only from uploaded
+                company documents.
+            </p>
+
+        </div>
+
+
+        <div class="online-status">
+            <span></span>
+            AI System Online
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div>
+                <h1>Customer Support Assistant</h1>
+
+                <p>
+                    Ask questions about our company
+                </p>
+            </div>
+
+            <div class="status">
+                <span></span>
+                Online
+            </div>
+
+        </header>
+
+
+        <!-- CHAT -->
+        <section
+            id="chatContainer"
+            class="chat-container"
+        >
+
+            <div class="welcome">
+
+                <div class="ai-icon">
+                    AI
+                </div>
+
+                <h2>
+                    How can I help you?
+                </h2>
+
+                <p>
+                    Ask me anything about our products,
+                    services or policies.
+                </p>
+
+
+                <div class="suggestions">
+
+                    <button
+                        type="button"
+                        onclick="useSuggestion('What is your return policy?')"
+                    >
+                        What is your return policy?
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick="useSuggestion('How long does delivery take?')"
+                    >
+                        How long does delivery take?
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick="useSuggestion('How can I contact support?')"
+                    >
+                        How can I contact support?
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INPUT -->
+        <div class="input-area">
+
+            <textarea
+                id="messageInput"
+                placeholder="Ask a question..."
+                rows="1"
+            ></textarea>
+
+            <button
+                id="sendButton"
+                type="button"
+            >
+                Send
+            </button>
+
+        </div>
+
+
+        <div class="footer-text">
+            AI answers are based only on company documents.
+        </div>
+
+    </main>
+
+
+    <!-- VERY IMPORTANT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
